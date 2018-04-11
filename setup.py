@@ -16,7 +16,6 @@ setup(
     version=version["__version__"],
     description="Additional chceks for colin -- the container linter. Used for image building tutorial at Open House 2018.",
     long_description=long_description,
-    long_description_content_type='text/markdown',
     packages=find_packages(),
     install_requires=[
         'colin',

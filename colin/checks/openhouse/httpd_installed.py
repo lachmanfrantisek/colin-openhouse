@@ -20,10 +20,10 @@ from colin.checks.abstract.filesystem import FileSystemCheck
 class FileCopy(FileSystemCheck):
 
     def __init__(self):
-        super().__init__(name="file_copy",
-                         message="Package httpd has to be isntalled.",
-                         description="To copy a file into image, use `COPY source destination`. Pro vkládání souborů do kontejnerového obrazu použij příkaz`COPY zdroj cíl`",
+        super().__init__(name="httpd_installed",
+                         message="Package httpd has to be isntalled (dnf install -y httpd).",
+                         description="Use RUN for running a command inside an image. Použij RUN pro spuštění příkazu v obraze.",
                          reference_url="https://docs.docker.com/engine/reference/builder/#copy",
-                         files=['/var/www/html/index.html'],
+                         files=['/usr/sbin/httpd'],
                          tags=['filesystem', 'copy', 'openhouse'],
                          all_must_be_present=False)
