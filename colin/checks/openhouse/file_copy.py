@@ -21,9 +21,9 @@ class FileCopy(FileSystemCheck):
 
     def __init__(self):
         super().__init__(name="file_copy",
-                         message="File /app/destination.txt needs to be present.",
+                         message="File /var/www/html/index.html needs to be present.",
                          description="To copy a file into image, use `COPY source destination`. Pro vkládání souborů do kontejnerového obrazu použij příkaz`COPY zdroj cíl`",
                          reference_url="https://docs.docker.com/engine/reference/builder/#copy",
-                         files=['/app/destination.txt'],
+                         files=['/var/www/html/index.html'],
                          tags=['filesystem', 'copy', 'openhouse'],
                          all_must_be_present=False)

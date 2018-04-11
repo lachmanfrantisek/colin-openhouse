@@ -25,12 +25,12 @@ class __WorkDirCheck(ContainerCheck, ImageCheck):
 
     def __init__(self):
         super().__init__(name="workdir",
-                         message="Working directory has to be specified.",
+                         message="Working directory has to be set to /var/www/html",
                          description="Use `WORKDIR /my/path` for specifying working directory. Pro zadání pracovního adresáře použij `WORKDIR /moje/cesta`.",
                          reference_url="https://fedoraproject.org/wiki/Container:Guidelines#workdir",
                          tags=["workdir", "required"])
 
-        self.workdir = "/app"
+        self.workdir = "/var/www/html"
 
     def check(self, target):
         workdir = target.instance.get_metadata()["Config"]["WorkingDir"]
