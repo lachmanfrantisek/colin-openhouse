@@ -6,7 +6,7 @@ BASE_PATH = os.path.dirname(__file__)
 
 # https://packaging.python.org/guides/single-sourcing-package-version/
 version = {}
-with open("./colin/version.py") as fp:
+with open("./colin-openhouse/version.py") as fp:
     exec(fp.read(), version)
 
 long_description = ''.join(open('README.md').readlines())
